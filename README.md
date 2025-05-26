@@ -1,41 +1,82 @@
-# APPMOBILE
+# Machine Status Dashboard
 
-## Prérequis
-- Node.js (v16+ recommandé)
-- PostgreSQL
+A real-time dashboard application for monitoring machine status across different manufacturing processes.
 
-## 1. Installation de la base de données
+## Features
 
-1. Crée une base de données PostgreSQL nommée `appmobile`.
-2. Exécute le script SQL suivant pour créer les tables et insérer les données de base :
+- Real-time machine status monitoring
+- Process-based organization
+- Status indicators (Working, Maintenance, Stopped)
+- Responsive design for both web and mobile
+- Standalone executable for easy deployment
 
-```sql
--- Voir le fichier appmobile.sql fourni dans ce projet
-```
+## Project Structure
 
-## 2. Backend
+- `backend/` - Node.js server with Express
+- `frontend/` - React web application
+- `MachineStatusExpo/` - React Native mobile application
 
-```bash
-cd backend
-npm install
-cp .env.example .env # puis configure la connexion à ta base de données
-npm start
-```
+## Setup Instructions
 
-## 3. Frontend
+### Backend
 
-```bash
-cd frontend
-npm install
-npm start
-```
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
 
-## 4. Connexion
-- Par défaut, crée un utilisateur dans la table `users` (voir backend/controllers/authController.js pour le hash du mot de passe).
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
----
+3. Start the server:
+   ```bash
+   npm start
+   ```
 
-## Structure du projet
-- `/backend` : API Express (Node.js)
-- `/frontend` : Application React
-- `appmobile.sql` : Script d'initialisation de la base de données 
+### Frontend (Web)
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+### Mobile App
+
+1. Navigate to the MachineStatusExpo directory:
+   ```bash
+   cd MachineStatusExpo
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the Expo development server:
+   ```bash
+   npx expo start
+   ```
+
+## Standalone Version
+
+For Windows users, you can use the standalone version:
+
+1. Copy the `backend/backend.exe` and `backend/start-server.bat` files
+2. Run `start-server.bat` to start the backend server
+3. Open `frontend/index.html` in your web browser
+
+## License
+
+MIT 
