@@ -1,20 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend for machine status app",
-  "main": "index.js",
   "type": "module",
-  "bin": "index.js",
-  "pkg": {
-    "targets": [
-      "node18-win-x64"
-    ],
-    "outputPath": "dist"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "pkg .",
-    "dev": "nodemon index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -23,9 +13,5 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22",
-    "pkg": "^5.8.1"
   }
-}
+} 
