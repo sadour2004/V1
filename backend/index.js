@@ -34,6 +34,11 @@ const machines = [
   ...Array.from({ length: 4 }, (_, i) => ({ id: 90 + i + 1, name: `Flow forming ${String(i + 1).padStart(2, '0')}`, process_id: 6, status: 'working' })),
 ];
 
+// Root route for testing
+app.get('/', (req, res) => {
+  res.json({ message: 'API is running!' });
+});
+
 // Authentification simple
 app.post('/api/auth/login', (req, res) => {
   const { username, password } = req.body;
@@ -64,7 +69,8 @@ app.put('/api/machines/:id/status', (req, res) => {
   res.json(machine);
 });
 
-const PORT = 5000;
+// Use Glitch's PORT or default to 5000
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
 }); 
