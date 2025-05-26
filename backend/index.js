@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Utilisateur de démo
+// Demo user
 const users = [{ username: 'admin', password: 'test1234' }];
 
 // Processus
